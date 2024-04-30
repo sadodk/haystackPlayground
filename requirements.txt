@@ -1,0 +1,5 @@
+construct==2.5.3
+haystack==0.42
+pefile==2023.2.7
+python-ptrace==0.9.9
+six==1.16.0

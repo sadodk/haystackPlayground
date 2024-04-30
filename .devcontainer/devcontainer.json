@@ -1,0 +1,21 @@
+{
+    "name": "Haystack Tutorials",
+    "build": {
+        "dockerfile": "../Dockerfile.CI",
+        "context": ".."
+    },
+    "forwardPorts": [3000],
+    "runArgs": [
+        "-v", "/run/host-services/ssh-auth.sock:/ssh-auth.sock",
+        "-e", "SSH_AUTH_SOCK=/ssh-auth.sock",
+        "--env-file", ".devcontainer/devcontainer.env"
+    ], 
+    "mounts": [],
+
+    "customizations": {
+        "vscode": {
+            "extensions": ["ms-azuretools.vscode-docker", "ms-python.python"],
+            "settings": {} 
+        }
+    }
+}
